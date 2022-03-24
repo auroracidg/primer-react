@@ -2,8 +2,12 @@ import React from "react";
 import './Header.css'
 import logo from './../img/logovet.png'
 import IconoDelCarrito from '@mui/icons-material/ShoppingCart';
+import { ListItem } from "@mui/material"
 
-const Header = () =>{
+
+const Header = () => {
+
+    
 
     return(
 
@@ -11,7 +15,7 @@ const Header = () =>{
        
             <img src= {logo} alt= "logo"></img>
 
-            <h1>Clinica Veterinaria gomid</h1>
+            <h1 className= "" >Clinica Veterinaria gomid.</h1>
 
             <nav>
                <a href="#">Reserva de horas</a>
@@ -19,7 +23,8 @@ const Header = () =>{
                <a href="#">Contacto</a>
             </nav>
 
-            <IconoDelCarrito color="secondary"/>
+           
+       
 
        </div>
     )
