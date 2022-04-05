@@ -5,13 +5,10 @@ import IconoDelCarrito from '@mui/icons-material/ShoppingCart';
 import { ListItem } from "@mui/material"
 
 
-const Header = () => {
-
-    
+const Header = (props) => {
 
     return(
-
-        <div>
+        <div className="wrap-nav">
        
             <img src= {logo} alt= "logo"></img>
 
@@ -23,7 +20,7 @@ const Header = () => {
                <a href="#">Contacto</a>
             </nav>
 
-           
+            {props.children}
        
 
        </div>

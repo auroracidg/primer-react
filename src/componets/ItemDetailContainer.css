@@ -1,0 +1,11 @@
+.css-container {
+    background-color: whitesmoke;
+    display: block;
+    flex-direction: row;
+    
+}
+
+
+.title-collar {
+       font-size: 30px;
+}
