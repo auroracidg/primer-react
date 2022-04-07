@@ -8,11 +8,14 @@ import Boton from './componets/Boton';
 import Title from './componets/Title';
 import ItemDetailContainer from './componets/ItemDetailContainer';
 import ItemListContainer from './componets/ItemListContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
    const aurora = true
 
    return(
+      <BrowserRouter>
+      
     <div>
       <div className='main-container'>
       <Header></Header>
@@ -20,10 +23,13 @@ function App() {
        <CardWidget/>
        <ListItem  greeting="Bienvenido!!!"></ListItem>
       </div>
-      <ItemListContainer/>
-       <ItemDetailContainer></ItemDetailContainer>
-
+      <Routes>
+         <Route path="/" element={<ItemListContainer/>}/>
+         <Route path="/accesorios" element={<ItemDetailContainer/>}/>
+      </Routes>
+       
     </div>
+    </BrowserRouter>
  );
 };
 

@@ -3,21 +3,20 @@ import './Header.css'
 import logo from './../img/logovet.png'
 import IconoDelCarrito from '@mui/icons-material/ShoppingCart';
 import { ListItem } from "@mui/material"
-
+import { NavLink,Link } from "react-router-dom";
 
 const Header = (props) => {
 
     return(
         <div className="wrap-nav">
-       
-            <img src= {logo} alt= "logo"></img>
-
+        <NavLink to="/" ><img src= {logo} alt= "logo"></img></NavLink>
+            
             <h1 className= "" >Clinica Veterinaria gomid.</h1>
 
             <nav>
-               <a href="#">Reserva de horas</a>
-               <a href="#">Accesorios</a>
-               <a href="#">Contacto</a>
+               <NavLink to="categorias/reserva">Reserva de horas</NavLink>
+               <NavLink to="/accesorios">Accesorios</NavLink>
+               <NavLink to="categorias/contacto">Contacto</NavLink>
             </nav>
 
             {props.children}
